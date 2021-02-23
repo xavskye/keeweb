@@ -23,6 +23,7 @@ const PluginGallery = {
             this.logger.debug('Loading plugins...');
             const xhr = new XMLHttpRequest();
             xhr.open('GET', Links.Plugins + '/plugins.json');
+            xhr.setRequestHeader("Access-Control-Allow-Origin", "*")
             xhr.responseType = 'json';
             xhr.send();
             xhr.addEventListener('load', () => {
